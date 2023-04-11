@@ -9,8 +9,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import modelo.UsuarioDTO;
 
 /**
  *
@@ -26,6 +28,7 @@ public class conexion {
 
     Connection cx;
     PreparedStatement ps;
+    ResultSet rs;
 
     public conexion() {
     }
@@ -73,6 +76,38 @@ public class conexion {
 
         }
         return res;
+    }
+
+    public ArrayList<UsuarioDTO> InicarSesionVista(String usuario, String contrasena) {
+        ArrayList<UsuarioDTO> res = new ArrayList<>();
+        try {
+            ps = cx.prepareStatement("select * from usuario where id=? and contrasena=?");
+            ps.setString(1, usuario);
+            ps.setString(2, contrasena);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                UsuarioDTO lo = new UsuarioDTO();
+                lo.setId(rs.getInt("id"));
+                lo.setnombres(rs.getString("nombres"));
+                lo.setapellidos(rs.getString("apellidos"));
+                lo.setcorreo(rs.getString("correo"));
+                lo.setusuario(rs.getString("usuario"));
+                lo.setContrasena(rs.getString("contrasena"));
+                res.add(lo);              
+                
+
+            }
+            if (res.isEmpty()) {
+                System.out.println("Acceso denegado");
+            }else{
+                System.out.println("Acceso permitido");
+            }
+            
+            
+        } catch (Exception e) {
+        }
+        return res;
+
     }
 
     public int ejecutarSenciaSql(String sentSQL) {

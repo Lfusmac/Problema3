@@ -4,6 +4,11 @@
  */
 package vista;
 
+import configuracion.conexion;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import modelo.UsuarioDTO;
+
 /**
  *
  * @author Pipe_
@@ -13,11 +18,10 @@ public class IniciarSesionVista extends javax.swing.JFrame {
     /**
      * Creates new form IniciarSesionVista
      */
-
     public static RegistroUsuarioVista rg;
+
     public IniciarSesionVista() {
-       
-        
+
         initComponents();
         this.setLocationRelativeTo(null); //para cuando inici aparesca la pantalla centrada
     }
@@ -35,7 +39,7 @@ public class IniciarSesionVista extends javax.swing.JFrame {
         BtnIniciar = new javax.swing.JButton();
         BtnSalir = new javax.swing.JButton();
         TxtUsuario = new javax.swing.JTextField();
-        TxtContraena = new javax.swing.JPasswordField();
+        TxtContrasena = new javax.swing.JPasswordField();
         LblUsuario = new java.awt.Label();
         LblContrasena = new java.awt.Label();
         BtnRegistrar = new javax.swing.JButton();
@@ -64,7 +68,7 @@ public class IniciarSesionVista extends javax.swing.JFrame {
         });
         jPanel1.add(BtnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 120, 30));
         jPanel1.add(TxtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 170, 20));
-        jPanel1.add(TxtContraena, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, 170, 20));
+        jPanel1.add(TxtContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, 170, 20));
 
         LblUsuario.setAlignment(java.awt.Label.CENTER);
         LblUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -115,17 +119,41 @@ public class IniciarSesionVista extends javax.swing.JFrame {
 
     private void BtnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIniciarActionPerformed
         // TODO add your handling code here:
-         PrincipalVista principalVista=new PrincipalVista();
-        principalVista.setVisible(true);
-        this.dispose();
+        String usuario = TxtUsuario.getText();
+        String contrasena = new String(TxtContrasena.getPassword());
+        conexion co = new conexion();
+        
+        ArrayList<UsuarioDTO> re = co.InicarSesionVista(usuario, contrasena);
+        int dato[]= new int[1];
+        String datos[] = new String[5];
+        for (UsuarioDTO lo : re) {
+
+            dato[0] = lo.getId();
+            datos[1] = lo.getNombre();
+            datos[2] = lo.getApellido();
+            datos[3] = lo.getEmail();
+            datos[4] = lo.getUsuario();
+            datos[5] = lo.getContrasena();
+
+        }
+        if (re.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Acceso denegago");
+
+        } else {
+            PrincipalVista principalVista = new PrincipalVista();
+            principalVista.setVisible(true);
+            this.dispose();
+        }
+
+
     }//GEN-LAST:event_BtnIniciarActionPerformed
 
     private void BtnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegistrarActionPerformed
         // TODO add your handling code here:
-        rg=new RegistroUsuarioVista();
+        rg = new RegistroUsuarioVista();
         rg.setVisible(true);
-        
-        
+
+
     }//GEN-LAST:event_BtnRegistrarActionPerformed
 
     /**
@@ -169,14 +197,11 @@ public class IniciarSesionVista extends javax.swing.JFrame {
     private javax.swing.JButton BtnSalir;
     private java.awt.Label LblContrasena;
     private java.awt.Label LblUsuario;
-    private javax.swing.JPasswordField TxtContraena;
+    private javax.swing.JPasswordField TxtContrasena;
     private javax.swing.JTextField TxtUsuario;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jblFondo;
     // End of variables declaration//GEN-END:variables
 
     // para insertar imagen
-    
-  
-    
 }
