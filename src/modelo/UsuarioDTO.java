@@ -9,18 +9,22 @@ package modelo;
  * @author Pipe_
  */
 public class UsuarioDTO {
-    
+
+    int id;
     String nombre;
     String apellido;
     String email;
+    String usuario;
     String contrasena;
 
-    public String getApellido() {
-        return apellido;
+   
+  
+    public int getId() {
+        return id;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -31,12 +35,28 @@ public class UsuarioDTO {
         this.nombre = nombre;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    
+     public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
     public String getContrasena() {
@@ -46,5 +66,7 @@ public class UsuarioDTO {
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
-    
+
+ 
+
 }

@@ -27,94 +27,81 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Component id="JblIDimportacionB" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="TxtIDimportacionB" min="-2" pref="88" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="BtnDimportacionB" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="BtnMenu" alignment="0" max="32767" attributes="0"/>
-                          <Component id="BtnSalir" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="TxtCuidadOrigen1" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
-                          <Component id="DateEnvio" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                              <Component id="JblIDimportacion" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="TxtCantidad" min="-2" pref="158" max="-2" attributes="0"/>
+                          <Component id="BtnSalir" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Component id="BtnMenu" min="-2" pref="70" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="DateEntregra" min="-2" pref="177" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="BtnGuardar" max="32767" attributes="0"/>
-                                  <Component id="BtnLimpiar" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="ListEnvio1" min="-2" pref="160" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="ListPaises" min="-2" pref="160" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="TxtCuidaddestino" min="-2" pref="204" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="ListMonedaPago1" min="-2" pref="160" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="TxtIDimportacion" min="-2" pref="103" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                                      <Component id="ListTipoProducto" min="-2" pref="160" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="JblInfoProduc" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="TxtNombre1E" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
-                                  <Component id="TxtIDE" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
-                                  <Component id="TxtNombre2E" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
-                                  <Component id="TxtApellido1E" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
-                                  <Component id="TxtApellido2E" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="TxtCantidad" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TxtNombreP" alignment="0" min="-2" pref="177" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="TxtCuidadOrigen1" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                      <Component id="ListEnvio1" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="TxtCuidaddestino" min="-2" pref="204" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                              <Component id="ListTipoProducto" min="-2" pref="160" max="-2" attributes="0"/>
+                                              <Component id="ListPaises" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="ListMonedaPago" min="-2" pref="160" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
-                          <Component id="JblInfoEmpleado" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="DateEnvio" min="-2" pref="180" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              <Component id="DateEntregra" min="-2" pref="177" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="JblInfoProduc" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="TxtNombreEmp" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
+                                      <Component id="TxtIDE" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
+                                      <Component id="TxtApellidoEmp" min="-2" pref="242" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="TxtNombreFunc" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
+                                      <Component id="TxtIDF" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
+                                      <Component id="TxtApellidoFunc" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
+                                      <Component id="JblInfoFuncionario" min="-2" pref="294" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="JblInfoEmpleado" alignment="0" min="-2" pref="281" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="BtnGuardar" max="32767" attributes="0"/>
+                                  <Component id="BtnLimpiar" min="-2" pref="85" max="-2" attributes="0"/>
+                                  <Component id="BtnEliminar" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="126" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="TxtNombre1F" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
-                          <Component id="TxtIDF" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
-                          <Component id="TxtNombre2F" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
-                          <Component id="TxtApellido1F" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
-                          <Component id="TxtApellido2F" alignment="0" min="-2" pref="242" max="-2" attributes="0"/>
-                          <Component id="JblInfoFuncionario" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -122,12 +109,6 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                      <Component id="BtnSalir" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="BtnMenu" min="-2" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -136,116 +117,80 @@
                           <Component id="BtnDimportacionB" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-              </Group>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="JblInfoEmpleado" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="JblInfoFuncionario" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="TxtIDE" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="TxtNombre1E" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="TxtNombre2E" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="TxtApellido1E" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="TxtApellido2E" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="TxtIDF" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="TxtNombre1F" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="TxtNombre2F" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="TxtApellido1F" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="TxtApellido2F" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="BtnSalir" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="BtnMenu" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Component id="JblInfoProduc" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="JblIDimportacion" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="TxtIDimportacion" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="ListTipoProducto" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="ListEnvio1" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
-                  <Component id="ListPaises" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
-                  <Component id="TxtCantidad" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
-              </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="TxtNombreP" min="-2" pref="51" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="TxtCuidaddestino" alignment="3" min="-2" pref="63" max="-2" attributes="0"/>
-                          <Component id="TxtCuidadOrigen1" alignment="3" min="-2" pref="63" max="-2" attributes="0"/>
+                          <Component id="ListEnvio1" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
+                          <Component id="TxtCantidad" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="ListMonedaPago1" min="-2" pref="47" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="DateEnvio" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="DateEntregra" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="BtnGuardar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="BtnLimpiar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="ListTipoProducto" min="-2" pref="47" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="ListPaises" min="-2" pref="47" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="TxtCuidadOrigen1" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="TxtCuidaddestino" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="ListMonedaPago" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="DateEnvio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="DateEntregra" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="JblInfoEmpleado" min="-2" pref="59" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="TxtIDE" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="TxtNombreEmp" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="TxtApellidoEmp" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="JblInfoFuncionario" min="-2" pref="59" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="TxtIDF" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="TxtNombreFunc" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="TxtApellidoFunc" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="BtnGuardar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="BtnEliminar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="15" max="32767" attributes="0"/>
+              <Component id="BtnLimpiar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="TxtNombre2E">
+    <Component class="javax.swing.JTextField" name="TxtApellidoEmp">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Segundo Nombre">
-              <Font PropertyName="font" name="Segoe UI" size="12" style="1"/>
-            </TitledBorder>
-          </Border>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtNombre2EActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="TxtApellido1E">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Primer Apellido">
-              <Font PropertyName="font" name="Segoe UI" size="12" style="1"/>
-            </TitledBorder>
-          </Border>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="TxtApellido2E">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Segundo Apellido">
+            <TitledBorder title="Apellidos">
               <Font PropertyName="font" name="Segoe UI" size="12" style="1"/>
             </TitledBorder>
           </Border>
@@ -266,7 +211,7 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Tipo de producto">
+            <TitledBorder title="Presentacion Producto">
               <Font PropertyName="font" name="Segoe UI" size="12" style="1"/>
             </TitledBorder>
           </Border>
@@ -365,67 +310,32 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtIDFActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="TxtNombre1F">
+    <Component class="javax.swing.JTextField" name="TxtNombreFunc">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Primer Nombre">
+            <TitledBorder title="Nombre completo">
               <Font PropertyName="font" name="Segoe UI" size="12" style="1"/>
             </TitledBorder>
           </Border>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtNombre1FActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtNombreFuncActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="TxtNombre2F">
+    <Component class="javax.swing.JTextField" name="TxtApellidoFunc">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Segundo Nombre">
-              <Font PropertyName="font" name="Segoe UI" size="12" style="1"/>
-            </TitledBorder>
-          </Border>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtNombre2FActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="JblIDimportacion">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="14" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="ID importaci&#xf3;n"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="TxtApellido1F">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Primer Apellido">
+            <TitledBorder title="Apellidos">
               <Font PropertyName="font" name="Segoe UI" size="12" style="1"/>
             </TitledBorder>
           </Border>
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TxtIDimportacion">
-    </Component>
-    <Component class="javax.swing.JTextField" name="TxtApellido2F">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Segundo Apellido">
-              <Font PropertyName="font" name="Segoe UI" size="12" style="1"/>
-            </TitledBorder>
-          </Border>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="ListMonedaPago1">
+    <Component class="javax.swing.JComboBox" name="ListMonedaPago">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="1"/>
@@ -440,14 +350,14 @@
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Tipo de pago">
+            <TitledBorder title="Moneda de pago">
               <Font PropertyName="font" name="Segoe UI" size="12" style="1"/>
             </TitledBorder>
           </Border>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ListMonedaPago1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ListMonedaPagoActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -590,18 +500,18 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtIDEActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="TxtNombre1E">
+    <Component class="javax.swing.JTextField" name="TxtNombreEmp">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Primer Nombre">
+            <TitledBorder title="Nombre completo">
               <Font PropertyName="font" name="Segoe UI" size="12" style="1"/>
             </TitledBorder>
           </Border>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtNombre1EActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtNombreEmpActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TxtCantidad">
@@ -614,6 +524,28 @@
           </Border>
         </Property>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TxtNombreP">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Nombre del producto">
+              <Font PropertyName="font" name="Segoe UI" size="12" style="1"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnEliminar">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Eliminar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnEliminarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

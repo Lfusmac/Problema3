@@ -4,10 +4,9 @@
  */
 package vista;
 
-/**
- *
- * @author Pipe_
- */
+import configuracion.conexion;
+import javax.swing.JOptionPane;
+
 public class RegistroUsuarioVista extends javax.swing.JFrame {
 
     /**
@@ -31,15 +30,17 @@ public class RegistroUsuarioVista extends javax.swing.JFrame {
         JblNombre = new javax.swing.JLabel();
         JblAPellido = new javax.swing.JLabel();
         JblEmail = new javax.swing.JLabel();
-        JblContrasena = new javax.swing.JLabel();
-        txtContrasena = new javax.swing.JPasswordField();
+        JblUsuario = new javax.swing.JLabel();
         Txtemail = new javax.swing.JTextField();
         TxtApellido = new javax.swing.JTextField();
         TxtNombre = new javax.swing.JTextField();
         BtnRegistrar = new javax.swing.JButton();
-        LisTipoUsuario = new javax.swing.JComboBox<>();
         BtnIngresar = new javax.swing.JButton();
         JblLogo = new javax.swing.JLabel();
+        JblContrasena = new javax.swing.JLabel();
+        Btnlimpiar = new javax.swing.JButton();
+        Txtusuario = new javax.swing.JTextField();
+        txtContrasena = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro de usuarios");
@@ -50,6 +51,9 @@ public class RegistroUsuarioVista extends javax.swing.JFrame {
         JblAPellido.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         JblAPellido.setText("Apellidos");
 
+        JblEmail.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        JblEmail.setText("Email");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -57,7 +61,8 @@ public class RegistroUsuarioVista extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JblAPellido, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JblEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 57, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -65,16 +70,15 @@ public class RegistroUsuarioVista extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(JblNombre)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(JblAPellido)
-                .addGap(35, 35, 35))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addComponent(JblEmail)
+                .addContainerGap())
         );
 
-        JblEmail.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        JblEmail.setText("Email");
-
-        JblContrasena.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        JblContrasena.setText("Contraseña");
+        JblUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        JblUsuario.setText("Usuario");
 
         Txtemail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,12 +88,9 @@ public class RegistroUsuarioVista extends javax.swing.JFrame {
 
         BtnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnRegistrar.setText("Registrar");
-
-        LisTipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar rol", "Administrador", "Empleado", " " }));
-        LisTipoUsuario.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de usuario", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
-        LisTipoUsuario.addActionListener(new java.awt.event.ActionListener() {
+        BtnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LisTipoUsuarioActionPerformed(evt);
+                BtnRegistrarActionPerformed(evt);
             }
         });
 
@@ -103,68 +104,92 @@ public class RegistroUsuarioVista extends javax.swing.JFrame {
 
         JblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/register.png"))); // NOI18N
 
+        JblContrasena.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        JblContrasena.setText("Contraseña");
+
+        Btnlimpiar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Btnlimpiar.setText("Limpiar");
+        Btnlimpiar.setActionCommand("Limpiar");
+        Btnlimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnlimpiarActionPerformed(evt);
+            }
+        });
+
+        Txtusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtusuarioActionPerformed(evt);
+            }
+        });
+
+        txtContrasena.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtContrasenaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(266, 266, 266)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(TxtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                            .addComponent(TxtApellido)
-                            .addComponent(Txtemail)
-                            .addComponent(txtContrasena))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BtnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(129, 129, 129)
-                        .addComponent(BtnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(206, 206, 206)
+                        .addComponent(JblLogo))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(61, 61, 61)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JblEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(JblContrasena)
-                            .addComponent(LisTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(JblLogo)))
-                .addGap(22, 22, 22))
+                            .addComponent(JblUsuario)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(91, 91, 91)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(TxtNombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                            .addComponent(Txtemail, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TxtApellido, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Txtusuario, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtContrasena)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(BtnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53)
+                        .addComponent(BtnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(165, 165, 165)
+                        .addComponent(Btnlimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(32, 82, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addContainerGap(55, Short.MAX_VALUE)
+                .addComponent(JblLogo)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(JblLogo)
-                    .addComponent(LisTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(TxtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(TxtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(36, 36, 36)
-                                .addComponent(TxtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
-                                .addComponent(Txtemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(JblEmail)))
-                        .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JblContrasena))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                        .addComponent(BtnIngresar)
-                        .addGap(14, 14, 14))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BtnRegistrar)
-                        .addGap(25, 25, 25))))
+                        .addComponent(TxtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Txtemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JblUsuario)
+                    .addComponent(Txtusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JblContrasena)
+                    .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnRegistrar)
+                    .addComponent(BtnIngresar))
+                .addGap(18, 18, 18)
+                .addComponent(Btnlimpiar)
+                .addGap(14, 14, 14))
         );
 
         pack();
@@ -179,9 +204,43 @@ public class RegistroUsuarioVista extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_BtnIngresarActionPerformed
 
-    private void LisTipoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LisTipoUsuarioActionPerformed
+    private void BtnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegistrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_LisTipoUsuarioActionPerformed
+        String nombre = TxtNombre.getText();
+        String apellido = TxtApellido.getText();
+        String correo = Txtemail.getText();
+        String usuario = Txtusuario.getText();
+        String contrasena = txtContrasena.getText();
+
+        conexion co = new conexion();
+        int respuesta = co.Reusuario(nombre, apellido, correo, usuario, contrasena);
+        if (respuesta == 1) {
+            JOptionPane.showMessageDialog(null, "Usuario resgistrado correctamente");
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Error al registrar el usuario");
+
+        }
+
+    }//GEN-LAST:event_BtnRegistrarActionPerformed
+
+    private void TxtusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtusuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtusuarioActionPerformed
+
+    private void txtContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContrasenaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtContrasenaActionPerformed
+
+    private void BtnlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnlimpiarActionPerformed
+        // TODO add your handling code here:
+        TxtNombre.setText("");
+        TxtApellido.setText("");
+        Txtemail.setText("");
+        Txtusuario.setText("");
+        txtContrasena.setText("");
+
+    }//GEN-LAST:event_BtnlimpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -222,16 +281,18 @@ public class RegistroUsuarioVista extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnIngresar;
     private javax.swing.JButton BtnRegistrar;
+    private javax.swing.JButton Btnlimpiar;
     private javax.swing.JLabel JblAPellido;
     private javax.swing.JLabel JblContrasena;
     private javax.swing.JLabel JblEmail;
     private javax.swing.JLabel JblLogo;
     private javax.swing.JLabel JblNombre;
-    private javax.swing.JComboBox<String> LisTipoUsuario;
+    private javax.swing.JLabel JblUsuario;
     private javax.swing.JTextField TxtApellido;
     private javax.swing.JTextField TxtNombre;
     private javax.swing.JTextField Txtemail;
+    private javax.swing.JTextField Txtusuario;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField txtContrasena;
+    private javax.swing.JTextField txtContrasena;
     // End of variables declaration//GEN-END:variables
 }
